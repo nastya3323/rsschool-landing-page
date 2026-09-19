@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/Inter-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./assets/fonts/Inter-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./assets/fonts/Inter-SemiBoldItalic.woff2") format("woff2");
+}
+
 *,
 *::before,
 *::after {
@@ -337,6 +369,12 @@ body {
   }
 }
 
+@media (max-width: 50em) {
+  .hero__card {
+    padding-inline: 60px;
+  }
+}
+
 @media (max-width: 48.1em) {
   /* Header start */
   .header__menu {
@@ -373,12 +411,6 @@ body {
     opacity: 1;
   }
   /* Hero end */
-}
-
-@media (max-width: 50em) {
-  .hero__card {
-    padding-inline: 60px;
-  }
 }
 
 @media (max-width: 44em) {
