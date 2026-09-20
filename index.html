@@ -7,11 +7,6 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <header class="header">
@@ -255,7 +250,112 @@
           </div>
         </div>
       </section>
-      <section class="slider"></section>
+
+      <section class="slider">
+        <div class="container">
+          <h2 class="slider__title">
+            Choose your <span>favorite</span> coffee
+          </h2>
+
+          <div class="slider__content">
+            <button class="slider__prev-btn" type="button">
+              <svg
+                width="14"
+                height="13"
+                viewBox="0 0 14 13"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M13 6.5H0.5M6.5 12.5L0.5 6.5L6.5 0.5"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <div class="slider__viewport">
+              <div class="slider__track">
+                <div class="slider__item">
+                  <img
+                    class="slider__image"
+                    src="./assets/images/main-page/coffee-slider-1.png"
+                    alt="S’mores Frappuccino"
+                    loading="lazy"
+                  />
+                  <div class="slider__description">
+                    <h3 class="slider__heading">S’mores Frappuccino</h3>
+                    <p class="slider__text">
+                      This new drink takes an espresso and mixes it with brown
+                      sugar and cinnamon before being topped with oat milk.
+                    </p>
+                    <p class="slider__price">$5.50</p>
+                  </div>
+                </div>
+
+                <div class="slider__item">
+                  <img
+                    class="slider__image"
+                    src="./assets/images/main-page/coffee-slider-2.png"
+                    alt="Caramel Macchiato"
+                    loading="lazy"
+                  />
+                  <div class="slider__description">
+                    <h3 class="slider__heading">Caramel Macchiato</h3>
+                    <p class="slider__text">
+                      Fragrant and unique classic espresso with rich
+                      caramel-peanut syrup, with cream under whipped thick foam.
+                    </p>
+                    <p class="slider__price">$5.00</p>
+                  </div>
+                </div>
+
+                <div class="slider__item">
+                  <img
+                    class="slider__image"
+                    src="./assets/images/main-page/coffee-slider-3.png"
+                    alt="Ice coffee"
+                    loading="lazy"
+                  />
+                  <div class="slider__description">
+                    <h3 class="slider__heading">Ice coffee</h3>
+                    <p class="slider__text">
+                      A popular summer drink that tones and invigorates.
+                      Prepared from coffee, milk and ice.
+                    </p>
+                    <p class="slider__price">$4.50</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="slider__next-btn" type="button">
+              <svg
+                width="14"
+                height="13"
+                viewBox="0 0 14 13"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M0.5 6.5H13M7 12.5L13 6.5L7 0.5"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="slider__controls">
+            <div class="slider__control slider__control--active"></div>
+            <div class="slider__control"></div>
+            <div class="slider__control"></div>
+          </div>
+        </div>
+      </section>
+
       <section class="about"></section>
       <section class="modile-app"></section>
     </main>
