@@ -734,6 +734,7 @@ body {
   height: 30px;
   border-radius: 100px;
   background: var(--border-primary);
+  transition: background 0.2s ease;
 }
 
 .filters__icon img {
@@ -923,8 +924,8 @@ body {
     color: var(--text-inverse);
     border-color: var(--bg-container);
   }
-  .filters__btn--active:hover .filters__icon {
-    background: var(--text-inverse);
+  .filters__btn:hover .filters__icon {
+    background: var(--bg-page);
   }
 
   .product-card:hover .product-card__image img {
