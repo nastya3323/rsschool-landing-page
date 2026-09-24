@@ -965,6 +965,12 @@ body {
 }
 
 @media (max-width: 60em) {
+  /* Header start */
+  .menu__list {
+    gap: 15px;
+  }
+  /* Header end */
+
   /* Footer start */
   .footer__inner {
     flex-direction: column;
@@ -974,12 +980,6 @@ body {
 }
 
 @media (max-width: 52em) {
-  /* Header start */
-  .menu__list {
-    gap: 20px;
-  }
-  /* Header end */
-
   /* Hero start */
   .hero__card {
     padding-inline: 60px;
@@ -987,7 +987,7 @@ body {
   /* Hero end */
 }
 
-@media (max-width: 48.1em) {
+@media (max-width: 48.05em) {
   /* Header start */
   .header__menu {
     display: none;
