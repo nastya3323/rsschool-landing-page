@@ -818,7 +818,7 @@ body {
 }
 
 .catalog__show-more {
-  display: none;
+  display: flex;
   justify-content: center;
 }
 
@@ -839,6 +839,10 @@ body {
 }
 
 /* Catalog Page */
+
+.is-hidden {
+  display: none;
+}
 
 @media (hover: hover) {
   /* Header start */
@@ -1047,12 +1051,8 @@ body {
   /* Footer end */
 
   /* Catalog Page */
-  .product-card:nth-child(n + 5) {
+  .catalog__grid:not(.is-expanded) .product-card:nth-child(n + 5) {
     display: none;
-  }
-
-  .catalog__show-more {
-    display: flex;
   }
   /* Catalog Page */
 }
