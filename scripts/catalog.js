@@ -1,4 +1,5 @@
 import renderProductCard from "./components/productCard.js";
+import { openModal } from "./modal.js";
 import { getProducts } from "./utils/api.js";
 import { buildElement } from "./utils/dom.js";
 import { filterByCategory } from "./utils/filter.js";
@@ -37,6 +38,10 @@ export default function initCatalog() {
 async function loadAndRender(grid, filterButtons, mq, showMoreContainer) {
   try {
     const products = await getProducts();
+
+    grid.addEventListener("click", (event) => {
+      handleCardClick(event, products);
+    });
 
     function applyFilter(category, button) {
       filterButtons.forEach((btn) => {
@@ -98,4 +103,30 @@ function updateShowMoreButton(grid, mq, showMoreContainer) {
     cards.length > VISIBLE_ON_MOBILE && mq.matches && !expanded;
 
   showMoreContainer.classList.toggle("is-hidden", !shouldShow);
+}
+
+function handleCardClick(event, products) {
+  const trigger = event.target.closest(".product-card__trigger");
+
+  if (!trigger) {
+    return;
+  }
+
+  const card = trigger.closest(".product-card");
+
+  if (!card) {
+    return;
+  }
+
+  const productId = card.dataset.productId;
+
+  const product = products.find((product) => {
+    return product.id === productId;
+  });
+
+  if (!product) {
+    return;
+  }
+
+  openModal(product);
 }

@@ -3,7 +3,7 @@ import { buildElement } from "../utils/dom.js";
 export default function renderProductCard(product) {
   const article = buildElement("article", {
     class: "product-card",
-    dataset: { category: product.category },
+    dataset: { category: product.category, productId: product.id },
   });
 
   const imageContainer = buildElement("div", {
@@ -47,6 +47,6 @@ export default function renderProductCard(product) {
 
   productCardBody.append(title, description, price);
   article.append(imageContainer, productCardBody);
-  
+
   return article;
 }

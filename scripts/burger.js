@@ -11,13 +11,13 @@ export default function initBurger() {
 
   burger.addEventListener("click", () => {
     burger.classList.toggle("burger-menu--open");
-    document.body.classList.toggle("is-menu-open");
+    document.body.classList.toggle("no-scroll");
   });
 
   document.addEventListener("keydown", (event) => {
     if (
       event.key === "Escape" &&
-      document.body.classList.contains("is-menu-open")
+      document.body.classList.contains("no-scroll")
     ) {
       closeMenu();
       burger.focus();
@@ -37,7 +37,9 @@ export default function initBurger() {
   });
 
   function closeMenu() {
-    burger.classList.remove("burger-menu--open");
-    document.body.classList.remove("is-menu-open");
+    if (burger.classList.contains("burger-menu--open")) {
+      burger.classList.remove("burger-menu--open");
+      document.body.classList.remove("no-scroll");
+    }
   }
 }
