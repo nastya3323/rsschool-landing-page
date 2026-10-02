@@ -104,7 +104,7 @@ body {
   font-weight: 600;
 }
 
-body.is-menu-open {
+body.no-scroll {
   overflow: hidden;
 }
 
@@ -1038,7 +1038,7 @@ body.is-menu-open {
     );
   }
 
-  body.is-menu-open .header__menu {
+  body.no-scroll .header__menu {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -1049,7 +1049,7 @@ body.is-menu-open {
     line-height: 125%;
   }
 
-  body.is-menu-open .menu__link--catalog {
+  body.no-scroll .menu__link--catalog {
     display: flex;
   }
 
